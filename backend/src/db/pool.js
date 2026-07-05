@@ -1,6 +1,6 @@
 const { Pool } = require("pg");
 
-// Prefer a single DATABASE_URL (common on Render/Railway/Supabase/Neon),
+// Prefer a single DATABASE_URL (common on Supabase/Neon),
 // fall back to discrete PG* env vars for local dev.
 const useConnectionString = Boolean(process.env.DATABASE_URL);
 

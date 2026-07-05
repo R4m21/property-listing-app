@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 
 const authRoutes = require("./routes/auth");
+const propertyRoutes = require("./routes/properties");
+const enquiryRoutes = require("./routes/enquiries");
+const uploadRoutes = require("./routes/uploads");
 
 const app = express();
 
@@ -13,6 +16,9 @@ app.get("/api/health", (req, res) => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use("/api/properties", propertyRoutes);
+app.use("/api/enquiries", enquiryRoutes);
+app.use("/api/uploads", uploadRoutes);
 
 // 404 handler
 app.use((req, res) => {
