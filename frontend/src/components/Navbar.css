@@ -1,0 +1,76 @@
+.navbar {
+  background: var(--ink-900);
+  border-bottom: 1px solid var(--ink-800);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: 24px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--paper-50);
+  white-space: nowrap;
+}
+
+.navbar-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--brass-500);
+  color: var(--ink-900);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 22px;
+  flex: 1;
+}
+
+.navbar-links a {
+  color: var(--stone-200);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+.navbar-links a:hover { color: var(--paper-50); }
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-user {
+  color: var(--paper-50);
+  font-size: 0.85rem;
+}
+.navbar-role {
+  color: var(--stone-400);
+  text-transform: capitalize;
+}
+
+.navbar-actions .btn-outline {
+  color: var(--paper-50);
+  border-color: var(--ink-700);
+}
+.navbar-actions .btn-outline:hover { border-color: var(--brass-500); }
+
+@media (max-width: 720px) {
+  .navbar-links { display: none; }
+}
