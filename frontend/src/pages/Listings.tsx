@@ -3,6 +3,7 @@ import api from "../api/axios";
 import PropertyCard from "../components/PropertyCard";
 import type { Property, PropertyListResponse } from "../types";
 import "./Listings.css";
+import useDebounce from "../hooks/useDebounce";
 
 export default function Listings() {
   const [location, setLocation] = useState("");
@@ -15,16 +16,18 @@ export default function Listings() {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const debouncedLocation = useDebounce(location, 500);
+  const debouncedMaxPrice = useDebounce(maxPrice, 500);
 
   const fetchProperties = useCallback(async () => {
     setLoading(true);
     setError("");
     try {
       const params: Record<string, string> = { page: String(page), limit: "9" };
-      if (location) params.location = location;
+      if (debouncedLocation) params.location = debouncedLocation;
       if (bhk) params.bhk = bhk;
       if (type) params.type = type;
-      if (maxPrice) params.maxPrice = maxPrice;
+      if (debouncedMaxPrice) params.maxPrice = debouncedMaxPrice;
 
       const { data } = await api.get<PropertyListResponse>("/properties", {
         params,
@@ -37,7 +40,7 @@ export default function Listings() {
     } finally {
       setLoading(false);
     }
-  }, [page, location, bhk, type, maxPrice]);
+  }, [page, debouncedLocation, bhk, type, debouncedMaxPrice]);
 
   useEffect(() => {
     fetchProperties();
