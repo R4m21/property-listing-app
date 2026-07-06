@@ -26,7 +26,10 @@ router.post(
   [
     body("propertyId").notEmpty().withMessage("propertyId is required"),
     body("name").trim().notEmpty().withMessage("Name is required"),
-    body("phone").trim().notEmpty().withMessage("Phone is required"),
+    body("phone")
+      .trim()
+      .matches(/^[6-9]\d{9}$/)
+      .withMessage("Please enter a valid 10-digit Indian mobile number"),
     body("email")
       .optional({ checkFalsy: true })
       .isEmail()

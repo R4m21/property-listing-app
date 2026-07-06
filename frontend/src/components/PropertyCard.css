@@ -1,0 +1,63 @@
+.property-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.property-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-pop);
+}
+
+.property-card-media {
+  height: 132px;
+  background: linear-gradient(135deg, var(--ink-800), var(--ink-700));
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+.property-card-bhk {
+  background: rgba(250, 248, 244, 0.92);
+  color: var(--ink-900);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.property-card-body {
+  padding: 16px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.property-card-body h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.property-card-location {
+  color: var(--muted-text);
+  font-size: 0.85rem;
+}
+
+.property-card-price {
+  font-weight: 700;
+  color: var(--ink-900);
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+.property-card-area {
+  color: var(--stone-400);
+  font-size: 0.8rem;
+}

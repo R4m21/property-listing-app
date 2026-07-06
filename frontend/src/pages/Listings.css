@@ -1,0 +1,112 @@
+.hero {
+  background: var(--ink-900);
+  padding: 64px 0 96px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 85% 0%,
+    rgba(198, 154, 74, 0.22),
+    transparent 45%
+  );
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+}
+.hero-eyebrow {
+  color: var(--brass-400);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  color: var(--paper-50);
+  font-size: clamp(2rem, 4vw, 2.85rem);
+  max-width: 640px;
+  margin: 12px 0 12px;
+}
+.hero p {
+  color: var(--stone-200);
+  max-width: 520px;
+  font-size: 1rem;
+}
+
+.search-panel {
+  margin-top: -56px;
+  position: relative;
+  z-index: 2;
+}
+.search-panel-inner {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr 0.9fr 0.9fr auto;
+  gap: 12px;
+  align-items: end;
+}
+.search-panel .field {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .search-panel-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.listings-section {
+  padding: 40px 0 80px;
+  flex: 1;
+}
+
+.listings-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.listings-meta h2 {
+  font-size: 1.3rem;
+}
+.listings-meta span {
+  color: var(--muted-text);
+  font-size: 0.88rem;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 22px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 36px;
+}
+.pagination button {
+  min-width: 38px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--stone-200);
+  background: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.pagination button.active {
+  background: var(--ink-900);
+  color: var(--paper-50);
+  border-color: var(--ink-900);
+}
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

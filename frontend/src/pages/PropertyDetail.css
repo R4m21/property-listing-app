@@ -1,0 +1,154 @@
+.detail-page {
+  flex: 1;
+  padding: 40px 0 80px;
+}
+
+.detail-media {
+  height: 280px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--ink-800), var(--ink-700));
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+.detail-gallery {
+  margin-bottom: 28px;
+}
+.detail-thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+.detail-thumb {
+  width: 72px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--paper-100);
+  padding: 0;
+}
+.detail-thumb.active {
+  border-color: var(--brass-500);
+}
+.detail-media-label {
+  color: var(--stone-200);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+@media (max-width: 860px) {
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detail-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.detail-top h1 {
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+}
+.detail-location {
+  color: var(--muted-text);
+}
+
+.detail-price {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--ink-900);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.detail-stats {
+  display: flex;
+  gap: 24px;
+  margin: 20px 0 24px;
+  padding: 18px 0;
+  border-top: 1px solid var(--paper-100);
+  border-bottom: 1px solid var(--paper-100);
+}
+.detail-stat strong {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--ink-900);
+}
+.detail-stat span {
+  font-size: 0.78rem;
+  color: var(--muted-text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.detail-description h2 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+.detail-description p {
+  color: var(--ink-text);
+  line-height: 1.65;
+}
+
+.detail-owner-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.enquiry-card {
+  padding: 26px;
+}
+.enquiry-card h2 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+.enquiry-card-sub {
+  color: var(--muted-text);
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.agent-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--paper-100);
+}
+.agent-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--brass-100);
+  color: #8a6a22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.agent-badge div span {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--muted-text);
+}
