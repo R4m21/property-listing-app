@@ -173,3 +173,6 @@ Foreign keys use `ON DELETE CASCADE`, so deleting a property automatically remov
 
 - **Backend**: deploy `backend/` to Render/Railway/Fly.io. Set `DATABASE_URL` (point it at a managed Postgres instance — Neon/Supabase all offer one), `PGSSL=true`, `JWT_SECRET`, and the three `CLOUDINARY_*` vars. Run `npm run db:init` once after first deploy.
 - **Frontend**: deploy `frontend/` (after `npm run build`) to Vercel/Netlify. Set `VITE_API_URL` to your deployed backend URL.
+
+---
+Built by [Maniram](https://github.com/R4m21) · [LinkedIn](https://www.linkedin.com/in/maniram-chauhan)
