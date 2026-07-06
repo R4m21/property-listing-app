@@ -55,7 +55,7 @@
 
 @media (max-width: 900px) {
   .search-panel-inner {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
